@@ -16,7 +16,7 @@
     height: 8rem;
     background-color: white;
     color: #1f2937;
-    padding: 1rem 2rem;
+    padding: 1rem 2rem; /* Espacio interno */
     font-size: 1.25rem;
     border-radius: 0.75rem;
     border: 3px solid black;
@@ -25,6 +25,11 @@
     transition: background-color 0.2s ease;
     width: 100%;           /* Ocupa todo el ancho del contenedor */
     text-align: center;
+    /* Para alinear el icono */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; /* Espacio entre ícono y texto */
   }
   
   .button:hover {

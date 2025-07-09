@@ -12,6 +12,7 @@ function App() {
         <Header />
         <main className="flex-grow flex items-center justify-center">
           <Routes>
+            <Route path="/" element={<MainTurnos />} />
             <Route path="/turnos/mainTurnos" element={<MainTurnos />} />{" "}
             {/* con el '*' indico que tiene rutas anidadas*/}
           </Routes>

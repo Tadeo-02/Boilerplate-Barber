@@ -2,9 +2,9 @@ import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
+
 function Header() {
   const [open, setOpen] = useState(false);
-
   return (
     <nav>
       <div className="fixed top-0 left-0 right-0 h-16 bg-gray-800 text-white px-4 flex items-center justify-between z-50">
@@ -12,7 +12,7 @@ function Header() {
         <div>
           <Link to="/" aria-label="Ir al inicio">
             <img
-              src="/images/logo-barber.png"
+              src="/images/logoBarber.png"
               alt="logo-barber"
               className="h-12"
             />
@@ -54,7 +54,8 @@ function Header() {
             </Link>
           </li>
           <li>
-            <Link to="/productos" onClick={() => setOpen(false)}>
+            {/* <Link to="/productos" onClick={() => navigate("/productos")}> */}
+            <Link to="/productos/mainProductos.tsx" onClick={() => setOpen(false)}>
               Productos
             </Link>
           </li>

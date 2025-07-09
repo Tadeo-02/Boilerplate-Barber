@@ -1,21 +1,21 @@
-// import styles from './footer.module.css';
+import styles from './footer.module.css';
 
 function Footer() {
-  const styles: React.CSSProperties = {
-    position: "absolute",
-    left: 0,
-    right: 0,
-    bottom: 0,
-    height: "4rem",
-    backgroundColor: "#1f2937",
-    color: "white",
-    paddingTop: "1rem",
-    paddingBottom: "1rem",
-    textAlign: "center",
-  }
+  // const styles: React.CSSProperties = {
+  //   position: "absolute",
+  //   left: 0,
+  //   right: 0,
+  //   bottom: 0,
+  //   height: "4rem",
+  //   backgroundColor: "#1f2937",
+  //   color: "white",
+  //   paddingTop: "1rem",
+  //   paddingBottom: "1rem",
+  //   textAlign: "center",
+  // }
 
   return (
-    <footer style={styles} >
+    <footer className={styles.footer} >
       <p>© 2025 Mechas Barbershop</p>
     </footer>
   );

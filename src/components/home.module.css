@@ -1,19 +1,16 @@
 .homeContainer {
     display: flex;
     flex-direction: column;
-    align-items: stretch;  /* Los botones se estiran al ancho completo */
+    align-items: center;  /* Los botones se estiran al ancho completo */
+    justify-content: center;
     gap: 1.5rem;
-    padding: 1.5rem;
-    padding-top: 16rem;
     background-color: white;
-    max-width: 28rem;
-    margin: 0 auto;
     border-radius: 0.5rem;
     width: 100%;
   }
   
   .button {
-    height: 8rem;
+    height: 8rem; /* altura fija de los botones para que ocupen el mismo espacio */
     background-color: white;
     color: #1f2937;
     padding: 1rem 2rem; /* Espacio interno */
@@ -25,7 +22,7 @@
     transition: background-color 0.2s ease;
     width: 100%;           /* Ocupa todo el ancho del contenedor */
     text-align: center;
-    /* Para alinear el icono */
+    /* para alinear el icono con el texto*/
     display: flex;
     align-items: center;
     justify-content: center;

@@ -59,6 +59,11 @@ function Header() {
               Productos
             </Link>
           </li>
+          <li>
+            <Link to="/login" onClick={() => setOpen(false)}>
+              Login
+            </Link>
+          </li>
           {/* Agrega más enlaces aquí */}
         </ul>
       </div>

@@ -1,2 +1,2 @@
 # Boilerplate-Barber
-Boilerplate del Frontend de Barberia
+Boilerplate del Frontend de Barberia Com 302

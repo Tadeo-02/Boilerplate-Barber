@@ -1,0 +1,27 @@
+.horariosTurnoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.horariosTurno {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  padding: 5px;
+  margin: 5px;
+  border: black solid 1px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  width: 28.5%;
+  height: auto;
+}
+.horariosTurno:active {
+    border-color: #0077cc;
+    background-color: #e6f0ff;
+    transform: scale(0.99);
+    transition: all 0.2s ease;
+}

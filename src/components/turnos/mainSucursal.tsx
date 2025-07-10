@@ -14,25 +14,24 @@ function AgendarTurno() {
   return <div>Formulario para solicitar un turno nuevo</div>;
 }       
 
-function MainTurnos() {
+function MainSucursal() {
   return (
     <div>
-      <h1 style={{ fontSize: 40 }}>Sucursal N°1</h1>
-      <img src="/public/images/fotoSucursal.jpg" alt="logo-sucursal" />
-      <nav>
-        <div className={styles.mainSucursal}>
-          <Link to="Ubicación">Ubicación</Link>
-        </div>
-        <div className={styles.mainSucursal}>
-          <Link to="Horarios">Horarios</Link>
-        </div>
-        <div className={styles.mainSucursal}>
-          <Link to="Barberos">Barberos</Link>
-        </div>
-        <div className={styles.mainSucursal}>
-          <Link to="Agendar Turnos">Agendar Turnos</Link>
-        </div>
-      </nav>
+      <h1 style={{ fontSize: 40 }}>Sucursal Centro</h1>
+      <img src="/images/fotoSucursal.jpg" alt="logo-sucursal" />
+      {/* BOTONES SUCURSAL */}
+      <div className={styles.mainSucursal}>
+        <Link to="Ubicación">Ubicación</Link>
+      </div>
+      <div className={styles.mainSucursal}>
+        <Link to="Horarios">Horarios</Link>
+      </div>
+      <div className={styles.mainSucursal}>
+        <Link to="Barberos">Barberos</Link>
+      </div>
+      <div className={styles.mainSucursal}>
+        <Link to="Agendar Turnos">Agendar Turnos</Link>
+      </div>
       <Routes>
         <Route path="Ubicación" element={<Ubicacion />} />
         <Route path="Horarios" element={<Horarios />} />
@@ -42,4 +41,4 @@ function MainTurnos() {
     </div>
   );
 }
-export default MainTurnos;
+export default MainSucursal;

@@ -12,7 +12,7 @@ function Header() {
         <div>
           <Link to="/" aria-label="Ir al inicio">
             <img
-              src="/images/logoBarber.png"
+              src="/images/logoAplicacion.jpg"
               alt="logo-barber"
               className="h-12"
             />

@@ -25,3 +25,10 @@
     transform: scale(0.99);
     transition: all 0.2s ease;
 }
+
+.seleccionado {
+        border: 2px solid #231f55 !important;
+        background: #eaf2ff;
+        border-radius: 15px;
+        box-sizing: border-box;
+    }

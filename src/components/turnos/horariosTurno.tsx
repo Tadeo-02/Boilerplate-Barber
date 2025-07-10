@@ -1,6 +1,9 @@
-import styles from "./horariosTurnos.module.css";
+import styles from "./horariosTurno.module.css";
+import { useState } from "react";
 
 function HorarioTurno() {
+  const [seleccionado, setSeleccionado] = useState<string | null>(null);
+
   const horarios = [
     "08:00",
     "08:30",
@@ -31,17 +34,29 @@ function HorarioTurno() {
   ];
 
   return (
+
     <div>
-      <h1 style={{ fontSize: 40 }}>Horarios de Turnos</h1>
-      <p>Aquí puedes ver los horarios disponibles para agendar tus turnos.</p>
+      <h1 style={{ fontSize: 40 }}>Seleccionar horario</h1>
       <br />
       <ul className={styles.horariosTurnoContainer}>
         {horarios.map((hora, idx) => {
           if (hora === "08:00") {
             return (
               <>
-                <h2 key="manana"> Mañana --------------------------------</h2>
-                <div className={styles.horariosTurno} key={idx}>
+                <h2 key="mañana"> Mañana --------------------------------</h2>
+                <div
+                  className={`${styles.horariosTurno} ${
+                    seleccionado === hora ? styles.seleccionado : ""
+                  }`}
+                  onClick={() => setSeleccionado(hora)}
+                  key={idx}
+                  tabIndex={0}
+                  role="button"
+                  onKeyPress={(e) => {
+                    if (e.key === "Enter" || e.key === " ")
+                      setSeleccionado(hora);
+                  }}
+                >
                   <li>{hora}</li>
                 </div>
               </>
@@ -50,7 +65,19 @@ function HorarioTurno() {
             return (
               <>
                 <h2 key="tarde">Tarde ------------------------------------</h2>
-                <div className={styles.horariosTurno} key={idx}>
+                <div
+                  className={`${styles.horariosTurno} ${
+                    seleccionado === hora ? styles.seleccionado : ""
+                  }`}
+                  onClick={() => setSeleccionado(hora)}
+                  key={idx}
+                  tabIndex={0}
+                  role="button"
+                  onKeyPress={(e) => {
+                    if (e.key === "Enter" || e.key === " ")
+                      setSeleccionado(hora);
+                  }}
+                >
                   <li>{hora}</li>
                 </div>
               </>
@@ -59,20 +86,44 @@ function HorarioTurno() {
             return (
               <>
                 <h2 key="noche">Noche -----------------------------------</h2>
-                <div className={styles.horariosTurno} key={idx}>
+                <div
+                  className={`${styles.horariosTurno} ${
+                    seleccionado === hora ? styles.seleccionado : ""
+                  }`}
+                  onClick={() => setSeleccionado(hora)}
+                  key={idx}
+                  tabIndex={0}
+                  role="button"
+                  onKeyPress={(e) => {
+                    if (e.key === "Enter" || e.key === " ")
+                      setSeleccionado(hora);
+                  }}
+                >
                   <li>{hora}</li>
                 </div>
               </>
             );
           } else {
             return (
-              <div className={styles.horariosTurno} key={idx}>
+              <div
+                className={`${styles.horariosTurno} ${
+                  seleccionado === hora ? styles.seleccionado : ""
+                }`}
+                onClick={() => setSeleccionado(hora)}
+                key={idx}
+                tabIndex={0}
+                role="button"
+                onKeyPress={(e) => {
+                  if (e.key === "Enter" || e.key === " ") setSeleccionado(hora);
+                }}
+              >
                 <li>{hora}</li>
               </div>
             );
           }
         })}
       </ul>
+      <br />
     </div>
   );
 }

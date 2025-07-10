@@ -5,6 +5,7 @@ function MainTurnos() {
   return (
      /*MUESTRA DE SUCURSALES */
     <div>
+      <br />
       <Link to="/mainSucursal">
         <div className={styles.container}>
           <h2 className={styles.title}>Sucursal Centro</h2>

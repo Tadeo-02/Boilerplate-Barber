@@ -18,7 +18,9 @@ function MainSucursal() {
   return (
     <div>
       <h1 style={{ fontSize: 40 }}>Sucursal Centro</h1>
-      <img src="/images/fotoSucursal.jpg" alt="logo-sucursal" />
+      <br />
+      <img src="/images/sucursal1.jpeg" alt="sucursal-1" />
+      <br />
       {/* BOTONES SUCURSAL */}
       <div className={styles.mainSucursal}>
         <Link to="Ubicación">Ubicación</Link>
@@ -30,7 +32,7 @@ function MainSucursal() {
         <Link to="Barberos">Barberos</Link>
       </div>
       <div className={styles.mainSucursal}>
-        <Link to="Agendar Turnos">Agendar Turnos</Link>
+        <Link to="/mainBarberos">Agendar Turnos</Link>
       </div>
       <Routes>
         <Route path="Ubicación" element={<Ubicacion />} />

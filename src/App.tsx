@@ -4,6 +4,9 @@ import Login from "./components/login/login";
 import Header from "./components/Header.tsx";
 import Footer from "./components/Footer.tsx";
 import MainTurnos from "./components/turnos/mainTurnos.tsx";
+import MainSucursal from "./components/turnos/mainSucursal.tsx";
+import MainBarberos from "./components/turnos/mainBarberos.tsx";
+import MainHorarios from "./components/turnos/mainHorarios.tsx";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -16,7 +19,10 @@ function App() {
             <Route path="/" element={<MainTurnos />} />
             <Route path="/turnos/mainTurnos" element={<MainTurnos />} />{" "}
             <Route path="/login" element={<Login />} />
-            {/* con el '*' indico que tiene rutas anidadas */}
+            <Route path="/mainSucursal/*" element={<MainSucursal />} />
+            <Route path="/mainBarberos" element={<MainBarberos />}></Route>
+            <Route path="/mainHorarios" element={<MainHorarios />}></Route>
+            {/* con el '*' indico que tiene rutas anidadas*/}
           </Routes>
         </main>
         <Footer />

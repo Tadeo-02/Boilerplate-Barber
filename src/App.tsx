@@ -16,7 +16,7 @@ function App() {
             <Route path="/" element={<MainTurnos />} />
             <Route path="/turnos/mainTurnos" element={<MainTurnos />} />{" "}
             <Route path="/login" element={<Login />} />
-            {/* con el '*' indico que tiene rutas anidadas*/}
+            {/* con el '*' indico que tiene rutas anidadas */}
           </Routes>
         </main>
         <Footer />
